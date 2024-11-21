@@ -1,0 +1,171 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+}
+
+/* Define font-face */
+@font-face {
+    font-family: 'Oxanium';
+    src: url('../font/Oxanium-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-image: url('https://i.pinimg.com/564x/06/90/01/069001f908fe34f04934ffc86c39a6d3.jpg');
+    background-size: cover; /* This will make sure the image covers the whole page */
+    background-position: center center; /* Centers the image */
+    background-repeat: no-repeat; /* Ensures the image doesn't repeat */
+    font-family: 'Oxanium', sans-serif; /* Default to sans-serif in case font fails to load */
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header {
+    background-color: #ff80ab; /* Soft pink */
+    background-color: #fa6396; /* Soft pink */
+    color: white;
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners for header */
+    margin-top: 10px;
+}
+
+.header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.2em;
+}
+
+.video-section {
+    margin: 40px 0;
+}
+
+.video-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* New Styles for Portrait Video with Curved Corners */
+.video-container {
+    width: 56.25%;  /* Aspect ratio 9:16 (9/16 = 0.5625) */
+    padding-bottom: 100%; /* Keep the height proportional to width */
+    position: relative;
+    overflow: hidden;
+    background-color: black; /* Optional: to add background color */
+    margin: 0 auto;
+    border-radius: 16px; /* Curved corners for the container */
+}
+
+#birthday-video {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Center the video horizontally */
+    width: 100%;  /* Fill the container width */
+    height: 100%; /* Fill the container height */
+    object-fit: cover; /* Ensure video covers the entire container */
+    border-radius: 16px; /* Curved corners for the video itself */
+}
+.message-section {
+    background-color: #fff2f7; /* Very light pink */
+    padding: 20px;
+    border-radius: 10px; /* Curved corners for the message section */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.message-section h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.message-section p {
+    font-size: 1.2em;
+    color: #555;
+    display: block; /* Ensure the paragraphs are visible */
+    text-align: justify; /* Justify the text inside the paragraphs */
+    margin-bottom: 15px; /* Space between paragraphs */
+}
+
+
+
+button {
+    background-color: #fa6396; /* Soft pink color */
+    color: white;
+    font-size: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px; /* Rounded corners for button */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff80ab; /* Lighter pink on hover */
+}
+
+button:focus {
+    outline: none; /* Remove outline when button is clicked */
+}
+
+.footer {
+    margin-top: 40px;
+    font-size: 1em;
+    color: #888;
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #ff80ab;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .header p,
+    .message-section p {
+        font-size: 1em;
+    }
+
+    .video-section h2 {
+        font-size: 1.5em;
+    }
+
+    .message-section {
+        padding: 15px;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    /* Adjust the portrait video container for mobile with rounded corners */
+    .video-container {
+        width: 75%;  /* Adjust for mobile */
+        padding-bottom: 133.33%; /* Adjust for portrait 3:4 aspect ratio (3/4 = 0.75) */
+        border-radius: 16px; /* Curved corners for mobile video */
+    }
+     .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;     
+    }
+}
